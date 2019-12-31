@@ -24,7 +24,7 @@ public WebDriver initializeDriver() throws IOException
 	
  prop= new Properties();
 	String path = System.getProperty("user.dir");
-FileInputStream fis=new FileInputStream(path+"//src//main//java//resource//data.properties");
+FileInputStream fis=new FileInputStream(path+"//src//main//java//resources//data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
