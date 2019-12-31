@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.lang.*;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -22,7 +23,8 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("..//resources//data.properties");
+	String path = System.getProperty("user.dir");
+FileInputStream fis=new FileInputStream(path+"//data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
